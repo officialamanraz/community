@@ -1,0 +1,109 @@
+.admin-container {
+    max-width: 600px;
+    margin: 50px auto;
+    font-family: sans-serif;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #050505;
+    color: #fff;
+}
+.admin-divider {
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #333;
+}
+.admin-message {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+.admin-message.error {
+    color: #ff4e45;
+    background-color: rgba(255, 78, 69, 0.1);
+}
+.admin-message.success {
+    color: #28a745;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #aaa;
+}
+.form-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    outline: none;
+}
+.form-input:focus {
+    border-color: #555;
+}
+.submit-btn {
+    padding: 12px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+.submit-btn.active {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+.submit-btn.active:hover {
+    background-color: #ddd;
+}
+.submit-btn.disabled {
+    background-color: #333;
+    color: #888;
+    cursor: not-allowed;
+}
+/* New classes for the dual-button layout */
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.btn-group .submit-btn {
+    flex: 1;
+    margin-top: 0;
+}
+.btn-create {
+    background-color: #28a745 !important;
+    color: #fff !important;
+}
+.btn-create:hover {
+    background-color: #218838 !important;
+}
+.back-btn {
+    padding: 8px 15px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.back-btn:hover {
+    background-color: #222;
+}

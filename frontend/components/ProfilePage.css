@@ -1,0 +1,318 @@
+/* --- Shell & Layout --- */
+.pp-shell {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* --- Slim Sidebar --- */
+.pp-sidebar {
+    width: 70px;
+    padding: 20px 0;
+    border-right: 1px solid #b026ff;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.4);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.pp-nav-link {
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.pp-nav-link:hover {
+    transform: scale(1.15);
+}
+
+/* --- Main Content Column --- */
+.pp-main {
+    width: 100%;
+    flex: 1;
+    border-left: 1px solid #b026ff;
+    border-right: 1px solid #b026ff;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.2);
+    min-height: 100vh;
+    background-color: #050505;
+}
+
+/* --- Dynamic Banner --- */
+.pp-banner {
+    width: 100%;
+    height: 420px; /* INCREASED BANNER HEIGHT */
+    background-color: #111;
+    border-bottom: 1px solid #b026ff;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Content Area --- */
+.pp-content {
+    padding: 0 30px 30px 30px;
+    position: relative;
+}
+
+/* --- Avatar --- */
+.pp-avatar-container {
+    width: 150px; /* Slightly larger to match the bigger banner */
+    height: 150px;
+    border-radius: 50%;
+    background-color: #222;
+    position: absolute;
+    top: -75px; /* Perfectly centered on the banner line */
+    left: 30px;
+    border: 4px solid #050505;
+    box-shadow: 0 0 15px rgba(176, 38, 255, 0.6);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pp-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pp-avatar-placeholder {
+    font-size: 50px;
+    color: #b026ff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* --- Actions & Buttons --- */
+.pp-actions {
+    position: absolute; /* Removed from document flow to kill empty space */
+    top: 20px;
+    right: 30px;
+}
+
+.pp-btn-primary {
+    padding: 8px 24px;
+    background-color: #b026ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.pp-btn-primary:hover {
+    background-color: #921be6;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.6);
+}
+
+.pp-btn-outline {
+    padding: 8px 24px;
+    background-color: transparent;
+    color: #b026ff;
+    border: 1px solid #b026ff;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 40px;
+    transition: background 0.2s;
+}
+
+.pp-btn-outline:hover {
+    background-color: rgba(176, 38, 255, 0.15);
+}
+
+/* --- User Info --- */
+.pp-info {
+    margin-top: 85px; /* Exactly clears the bottom of the overlapping avatar */
+}
+
+.pp-name {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.pp-username {
+    margin: 4px 0 0 0;
+    color: #888;
+    font-size: 16px;
+}
+
+.pp-bio {
+    margin-top: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ddd;
+    max-width: 600px;
+}
+
+.pp-stats {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.pp-stats strong {
+    color: #fff;
+}
+
+.pp-stats span {
+    color: #888;
+}
+
+.pp-error {
+    color: #ff6b6b;
+    margin-top: 15px;
+}
+
+/* --- Tabs (Posts / Comments) --- */
+.pp-tabs {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.pp-tab-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.pp-tab-btn:hover {
+    color: #ddd;
+}
+
+.pp-tab-btn.active {
+    color: #b026ff;
+}
+
+.pp-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #b026ff;
+    box-shadow: 0 0 8px rgba(176, 38, 255, 0.6);
+}
+
+/* --- Edit Form --- */
+.pp-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #111;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #b026ff;
+    box-shadow: 0 0 10px rgba(176, 38, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.pp-edit-form h3 {
+    margin: 0;
+    color: #b026ff;
+    text-shadow: 0 0 5px rgba(176, 38, 255, 0.6);
+}
+
+.pp-edit-form label {
+    color: #888;
+    font-size: 14px;
+}
+
+.pp-edit-form input[type="text"],
+.pp-edit-form textarea {
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+}
+
+.pp-edit-form input[type="text"]:focus,
+.pp-edit-form textarea:focus {
+    border-color: #b026ff;
+}
+
+.pp-edit-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.pp-edit-form input[type="file"] {
+    color: #b026ff;
+}
+
+/* --- Posts Grid & Comments List --- */
+.pp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.pp-grid-item {
+    aspect-ratio: 1 / 1;
+    background-color: #111;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.pp-grid-item:hover {
+    transform: scale(1.02);
+    border-color: #b026ff;
+}
+
+.pp-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pp-grid-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+}
+
+.pp-grid-text h4 {
+    margin: 0;
+    font-size: 14px;
+    color: #ddd;
+    word-break: break-word;
+}
+
+.pp-empty {
+    text-align: center;
+    color: #777;
+    padding: 40px 0;
+    grid-column: span 3;
+}

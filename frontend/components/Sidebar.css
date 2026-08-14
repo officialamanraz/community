@@ -1,0 +1,199 @@
+.sb-root {
+    width: 70px;
+    min-width: 70px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background: #000;
+    border-right: 1px solid rgba(176, 38, 255, 0.35);
+    display:flex;
+    /* visibility:hidden; */
+    flex-direction: column;
+    padding: 22px 14px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.sb-brand {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 6px 10px 26px 10px;
+}
+
+.sb-brand-mark {
+    color: #b026ff;
+    font-size: 20px;
+    text-shadow: 0 0 8px rgba(176, 38, 255, 0.9);
+}
+
+.sb-brand-word {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.sb-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sb-item {
+    display:flex;
+    align-items: center;
+    gap: 14px;
+    padding: 11px 12px;
+    border-radius: 10px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sb-item:hover {
+    background: rgba(176, 38, 255, 0.12);
+    color: #fff;
+}
+
+.sb-item-active {
+    color: #fff;
+    background: rgba(176, 38, 255, 0.18);
+    box-shadow: inset 0 0 0 1px rgba(176, 38, 255, 0.5);
+}
+
+.sb-rooms {
+    margin-top: 28px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.sb-rooms-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px 10px 12px;
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sb-rooms-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sb-room-chip {
+    padding: 9px 14px;
+    border-radius: 8px;
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.sb-room-chip:hover {
+    background: rgba(176, 38, 255, 0.10);
+    color: #eee;
+}
+
+.sb-room-chip-active {
+    color: #b026ff;
+    font-weight: 600;
+    background: rgba(176, 38, 255, 0.14);
+}
+
+.sb-footer {
+    padding-top: 14px;
+    border-top: 1px solid rgba(176, 38, 255, 0.2);
+}
+
+.sb-logout {
+    color: #ff6b6b;
+}
+
+.sb-logout:hover {
+    background: rgba(255, 107, 107, 0.12);
+    color: #ff8f8f;
+}
+
+@media (max-width: 900px) {
+    .sb-root {
+        width: 76px;
+        min-width: 76px;
+        padding: 18px 10px;
+    }
+    .sb-brand-word,
+    .sb-item span,
+    .sb-rooms-label span,
+    .sb-rooms {
+        display: none;
+    }
+    .sb-item {
+        justify-content: center;
+    }
+}
+.sb-rooms {
+    margin-top: 20px;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sb-rooms-label {
+    display: none; /* Slim sidebar mein rooms heading ki zaroorat nahi hai */
+}
+
+.sb-rooms-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Room chips ko Discord-style round badges bana diya */
+.sb-room-chip {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    color: #b026ff;
+    background: rgba(176, 38, 255, 0.1);
+    border: 1px solid rgba(176, 38, 255, 0.2);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.sb-room-chip:hover {
+    border-color: #b026ff;
+    background: rgba(176, 38, 255, 0.25);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.sb-room-chip-active {
+    background: #b026ff;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(176, 38, 255, 0.6);
+}

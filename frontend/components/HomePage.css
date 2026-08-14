@@ -1,0 +1,138 @@
+.home-page-wrapper {
+    background-color: #000;
+    color: #f1f1f1;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.home-banner {
+    width: 100%;
+    /* Pehle fixed height de kar test karte hain */
+    height: 350px; 
+    background-color: #222; /* Agar image load na ho toh dark grey dikhega */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ye debugging ke liye hai taaki pata chale image kyu nahi aayi */
+.banner-debug-text {
+    color: #ff4e45;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.home-content-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.home-header-title {
+    margin: 0;
+    font-size: 28px;
+}
+.home-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.btn-primary {
+    padding: 8px 16px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-primary:hover {
+    background-color: #ddd;
+}
+.btn-secondary {
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+}
+.btn-secondary:hover {
+    background-color: #222;
+}
+.home-divider {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+.error-msg {
+    color: #ff4e45;
+    padding: 10px;
+    background-color: rgba(255, 78, 69, 0.1);
+    border-radius: 8px;
+}
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+.room-card {
+    background-color: #0a0a0a;
+    border: 1px solid #333;
+    padding: 15px;
+    border-radius: 12px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+.room-card:hover {
+    transform: translateY(-4px);
+    border-color: #555;
+}
+.room-card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.room-card-placeholder {
+    width: 100%;
+    height: 160px;
+    background-color: #111;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    border: 1px solid #222;
+}
+.room-card-title {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+.room-card-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.room-card-link:hover {
+    background-color: #ddd;
+}

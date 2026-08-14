@@ -1,0 +1,51 @@
+/* Comments Section Container */
+.comments-section {
+    margin-top: 25px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.comments-section h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Comments List Layout */
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Individual Main Comment Card */
+.comment-item {
+    background: #151515;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #262626;
+    transition: border-color 0.2s ease;
+}
+
+.comment-item:hover {
+    border-color: #383838;
+}
+
+/* Nested Replies Indentation Container */
+.replies-list {
+    margin-left: 24px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 2px solid #333;
+    padding-left: 14px;
+}
+
+/* Individual Reply Item Card */
+.reply-item {
+    background: #1c1c1c;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #2a2a2a;
+}
