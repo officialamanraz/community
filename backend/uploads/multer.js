@@ -1,6 +1,6 @@
 const multer = require('multer');
 const cloudnary = require('cloudinary').v2;
-const {CloudnaryStorage} = require('multer-storage-cloudnary');
+const {CloudnaryStorage} = require('multer-storage-cloudinary');
 
 cloudnary.config({
     cloud_name:process.env.CLOUDINARY_CLOUD_NAME,
