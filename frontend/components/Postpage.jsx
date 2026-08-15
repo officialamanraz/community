@@ -2,8 +2,8 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getPostById, getComments, createComment, getCurrentUser, getAllRooms } from '../api';
 import Sidebar from '../components/Sidebar';
-import socket from '../socket';
-import './PostPage.css';
+import socket from '../Socket';
+import './Postpage.css';
 
 function timeLabel(dateString) {
     const d = new Date(dateString);
