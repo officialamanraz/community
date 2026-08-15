@@ -14,7 +14,7 @@ import {
     deleteComment
 } from '../api';
 import Sidebar from '../components/Sidebar';
-import socket from '../socket';
+import socket from '../Socket';
 import './RoomPage.css';
 
 function timeAgo(dateString) {
