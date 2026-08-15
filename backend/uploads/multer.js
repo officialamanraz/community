@@ -1,6 +1,6 @@
 const multer = require('multer');
 const cloudinary = require('cloudinary').v2;
-const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const cloudinaryStorageModule = require('multer-storage-cloudinary');
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -8,13 +8,26 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-const storage = new CloudinaryStorage({
-    cloudinary: cloudinary,
-    params: {
+let storage;
+
+// Yeh code khud detect karega ki Render par kaunsa version hai
+if (cloudinaryStorageModule.CloudinaryStorage) {
+    // Naya Version (v4+) ke liye
+    storage = new cloudinaryStorageModule.CloudinaryStorage({
+        cloudinary: cloudinary,
+        params: {
+            folder: 'community_app_images',
+            allowedFormats: ['jpg', 'jpeg', 'png', 'webp']
+        }
+    });
+} else {
+    // Purane Version (v2/v3) ke liye (Bina 'new' keyword ke)
+    storage = cloudinaryStorageModule({
+        cloudinary: cloudinary,
         folder: 'community_app_images',
-        allowedFormats: ['jpg', 'jpeg', 'png', 'webp'] 
-    }
-});
+        allowedFormats: ['jpg', 'jpeg', 'png', 'webp']
+    });
+}
 
 const upload = multer({ storage: storage });
 
