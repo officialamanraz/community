@@ -110,8 +110,7 @@ export default function ProfilePage() {
             <div className="pp-main">
                 <div
                     className="pp-banner"
-                    style={{ backgroundImage: profile.banner_image ? `url${profile.banner_image})` : 'none' }}>
-                </div>
+style={{ backgroundImage: profile.banner_image ? `url(${profile.banner_image})` : 'none' }}>                </div>
 
                 <div className="pp-content">
                     <div className="pp-avatar-container">
