@@ -54,16 +54,17 @@ console.log("Current Logged-In User:", currentUser);
         <div className="home-page-wrapper">
             
             {/* YAHAN CHANGES KIYE HAIN: Single quotes aur Debug Text */}
-            <div 
-                className="home-banner" 
-                style={profile.banner_iamge ? { backgroundImage: `url('${profile.banner_iamge}')` } : {}}
-            >
-                {!bannerUrl && (
-                    <p className="banner-debug-text">
-                        No banner URL found. Waiting for API...
-                    </p>
-                )}
-            </div>
+{/* YAHAN CHANGES KIYE HAIN: profile hata kar bannerUrl lagaya hai */}
+<div 
+    className="home-banner" 
+    style={bannerUrl ? { backgroundImage: `url('${bannerUrl}')` } : {}}
+>
+    {!bannerUrl && (
+        <p className="banner-debug-text">
+            No banner URL found. Waiting for API...
+        </p>
+    )}
+</div>
             <div className="home-content-container">
                 <div className="home-header">
                     <div className="home-nav-links">
