@@ -7,7 +7,9 @@ import Login from '../components/Login';
 import RoomPage from '../components/RoomPage';
 import AdminPage from '../components/AdminPage';
 import ProfilePage from '../components/ProfilePage'; 
-import PostPage from '../components/Postpage';// path check kar lenaimport PostPage from './pages/PostPage';
+import PostPage from '../components/Postpage';
+import ForgotPassword from './components/ForgotPassword';
+import ResetPassword from './components/ResetPassword';// path check kar lenaimport PostPage from './pages/PostPage';
 // ...
 
 // ...
@@ -24,6 +26,8 @@ function App() {
         <Route path="/admin" element={<AdminPage />} />
         <Route  path="/profile/:user_id?"element={<ProfilePage />}/>
         <Route path="/post/:post_id" element={<PostPage />} />
+        <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
+        <Route path="/ResetPassword" element={<ResetPassword/>}/>
       </Routes>
     </Router>
   );
