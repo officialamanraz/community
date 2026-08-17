@@ -8,8 +8,8 @@ import RoomPage from '../components/RoomPage';
 import AdminPage from '../components/AdminPage';
 import ProfilePage from '../components/ProfilePage'; 
 import PostPage from '../components/Postpage';
-import ForgotPassword from './components/ForgotPassword';
-import ResetPassword from './components/ResetPassword';// path check kar lenaimport PostPage from './pages/PostPage';
+import ForgotPassword from '../components/ForgotPassword';
+import ResetPassword from '../components/ResetPassword';// path check kar lenaimport PostPage from './pages/PostPage';
 // ...
 
 // ...
